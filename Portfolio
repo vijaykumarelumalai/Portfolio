@@ -3,959 +3,244 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vijay Kumar E | Enterprise Application Developer</title>
-    
-    <!-- Professional Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+    <title>Vijay Kumar's Portfolio</title>
     <style>
-        :root {
-            /* Premium High-Contrast Developer Palette */
-            --bg-base: #060913;
-            --bg-surface: #0f1526;
-            --bg-card: rgba(20, 30, 54, 0.65);
-            --color-primary: #38bdf8;   /* Electric Sky Blue */
-            --color-secondary: #34d399; /* Mint Emerald */
-            --text-primary: #f8fafc;
-            --text-secondary: #94a3b8;
-            --border-glow: rgba(56, 189, 248, 0.15);
-            --border-glass: rgba(255, 255, 255, 0.06);
-            --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        * {
-            box-sizing: border-box;
+        /* CSS styles */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
             margin: 0;
             padding: 0;
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            scroll-behavior: smooth;
         }
 
-        body {
-            background-color: var(--bg-base);
-            color: var(--text-primary);
-            line-height: 1.7;
-            overflow-x: hidden;
+        h1, h2, h3, h4, h5, h6 {
+            margin-bottom: 10px;
         }
 
-        /* Scrollbar styling */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: var(--bg-base); }
-        ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: var(--color-primary); }
+        p {
+            margin-bottom: 20px;
+        }
 
-        /* Global Layout Components */
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+
+        a {
+            color: #0088cc;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
         .container {
-            max-width: 1250px;
-            margin: 0 auto;
-            padding: 0 2.5rem;
-        }
-
-        section {
-            padding: 7.5rem 0 3.5rem 0;
-            position: relative;
-        }
-
-        .glass-card {
-            background: var(--bg-card);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid var(--border-glass);
-            border-radius: 16px;
-            transition: var(--transition-smooth);
-        }
-
-        .section-header {
-            margin-bottom: 4rem;
-        }
-
-        .section-tag {
-            color: var(--color-primary);
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-weight: 700;
-            display: block;
-            margin-bottom: 0.5rem;
-        }
-
-        .section-title {
-            font-size: 2.5rem;
-            font-weight: 800;
-            letter-spacing: -0.5px;
-        }
-
-        /* Navigation Bar */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            padding: 1.25rem 0;
-            background: rgba(6, 9, 19, 0.75);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-bottom: 1px solid var(--border-glass);
-            transition: var(--transition-smooth);
-        }
-
-        nav .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-weight: 800;
-            font-size: 1.4rem;
-            letter-spacing: -0.5px;
-            text-decoration: none;
-            color: #fff;
-        }
-
-        .logo span { color: var(--color-primary); }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2.5rem;
-            align-items: center;
-        }
-
-        .nav-links a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-size: 0.95rem;
-            font-weight: 500;
-            transition: var(--transition-smooth);
-        }
-
-        .nav-links a:hover, .nav-links a.active {
-            color: var(--color-primary);
-        }
-
-        /* Hero Architecture */
-        #hero {
-            min-height: 95vh;
-            display: flex;
-            align-items: center;
-            background: radial-gradient(circle at 85% 30%, rgba(56, 189, 248, 0.07) 0%, transparent 60%);
-            padding-top: 4rem;
-        }
-
-        .hero-layout {
-            display: grid;
-            grid-template-columns: 1.4fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .hero-headline {
-            font-size: 3.8rem;
-            line-height: 1.15;
-            font-weight: 900;
-            letter-spacing: -1.5px;
-            margin-bottom: 1.5rem;
-            background: linear-gradient(135deg, #fff 40%, var(--text-secondary) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .hero-sub {
-            font-size: 1.2rem;
-            color: var(--text-secondary);
-            margin-bottom: 3rem;
-            max-width: 640px;
-        }
-
-        .btn-group {
-            display: flex;
-            gap: 1.25rem;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            padding: 0.9rem 2rem;
-            border-radius: 8px;
-            font-weight: 600;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.75rem;
-            font-size: 0.95rem;
-            transition: var(--transition-smooth);
-            cursor: pointer;
-        }
-
-        .btn-primary {
-            background: var(--color-primary);
-            color: var(--bg-base);
-            border: 1px solid var(--color-primary);
-        }
-
-        .btn-primary:hover {
-            background: transparent;
-            color: var(--color-primary);
-            box-shadow: 0 0 25px rgba(56, 189, 248, 0.35);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: var(--text-primary);
-            border: 1px solid var(--border-glass);
-        }
-
-        .btn-secondary:hover {
-            border-color: var(--text-secondary);
-            background: rgba(255, 255, 255, 0.02);
-        }
-
-        /* Avatar Display Container */
-        .hero-media {
-            display: flex;
-            justify-content: center;
-            position: relative;
-        }
-
-        .avatar-frame {
-            width: 340px;
-            height: 340px;
-            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-            background: linear-gradient(45deg, var(--color-primary), var(--color-secondary));
-            padding: 4px;
-            animation: morphing 8s ease-in-out infinite alternate;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-        }
-
-        .avatar-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: inherit;
-            background: var(--bg-surface);
-        }
-
-        @keyframes morphing {
-            0% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
-            100% { border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%; }
-        }
-
-        /* Summary & Achievements Overview */
-        .summary-grid {
-            display: grid;
-            grid-template-columns: 1.5fr 1fr;
-            gap: 4rem;
-        }
-
-        .summary-text p {
-            color: var(--text-secondary);
-            font-size: 1.1rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .metrics-block {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1.5rem;
-        }
-
-        .metric-item {
-            padding: 2rem 1.5rem;
-            text-align: center;
-        }
-
-        .metric-num {
-            font-size: 2.8rem;
-            font-weight: 800;
-            color: var(--color-secondary);
-            display: block;
-            line-height: 1;
-            margin-bottom: 0.5rem;
-        }
-
-        .metric-title {
-            font-size: 0.85rem;
-            color: var(--text-secondary);
-            text-transform: uppercase;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-        }
-
-        /* Interactive Tech Stack Grid */
-        .filter-shelf {
-            display: flex;
-            gap: 0.75rem;
-            margin-bottom: 2.5rem;
-            flex-wrap: wrap;
-        }
-
-        .shelf-btn {
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid var(--border-glass);
-            color: var(--text-secondary);
-            padding: 0.6rem 1.4rem;
-            border-radius: 30px;
-            cursor: pointer;
-            font-weight: 500;
-            font-size: 0.85rem;
-            transition: var(--transition-smooth);
-        }
-
-        .shelf-btn.active, .shelf-btn:hover {
-            background: rgba(56, 189, 248, 0.1);
-            border-color: var(--color-primary);
-            color: var(--color-primary);
-        }
-
-        .stack-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-            gap: 1.25rem;
-        }
-
-        .stack-item {
-            padding: 1.25rem;
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            font-weight: 600;
-        }
-
-        .stack-item i {
-            font-size: 1.4rem;
-            color: var(--color-primary);
-        }
-
-        /* Experience Timeline Design */
-        .timeline-container {
-            max-width: 900px;
-            margin: 0 auto;
-            position: relative;
-        }
-
-        .timeline-container::before {
-            content: '';
-            position: absolute;
-            left: 20px;
-            top: 10px;
-            bottom: 10px;
-            width: 2px;
-            background: linear-gradient(to bottom, var(--color-primary), var(--bg-base));
-        }
-
-        .timeline-card {
-            position: relative;
-            padding-left: 4.5rem;
-            margin-bottom: 4rem;
-        }
-
-        .timeline-node {
-            position: absolute;
-            left: 11px;
-            top: 4px;
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background: var(--bg-base);
-            border: 4px solid var(--color-primary);
-            z-index: 2;
-        }
-
-        .time-badge {
-            display: inline-block;
-            padding: 0.25rem 0.75rem;
-            background: rgba(56, 189, 248, 0.08);
-            border: 1px solid rgba(56, 189, 248, 0.2);
-            color: var(--color-primary);
-            font-size: 0.8rem;
-            font-weight: 700;
-            border-radius: 4px;
-            margin-bottom: 0.75rem;
-            text-transform: uppercase;
-        }
-
-        .job-title { font-size: 1.5rem; font-weight: 700; }
-        .company-label { color: var(--text-secondary); display: block; margin-bottom: 1.25rem; font-weight: 500; }
-        
-        .bullet-list { padding-left: 1.25rem; color: var(--text-secondary); }
-        .bullet-list li { margin-bottom: 0.6rem; }
-
-        /* Advanced Project Card Architecture */
-        .project-masonry {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-            gap: 2.5rem;
-        }
-
-        .showcase-card {
+            width: 80%;
+            margin: auto;
             overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            height: 100%;
+            border: 2px solid #ccc; /* Border around the portfolio */
+            border-radius: 10px; /* Rounded corners */
+            padding: 20px;
         }
 
-        .showcase-card:hover {
-            transform: translateY(-6px);
-            border-color: rgba(56, 189, 248, 0.25);
-            box-shadow: 0 20px 40px -15px rgba(0,0,0,0.5);
+        .section {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        .image-wrapper {
+        table {
+            border-collapse: collapse;
             width: 100%;
-            height: 210px;
-            position: relative;
-            overflow: hidden;
-            background: #1e293b;
-            border-bottom: 1px solid var(--border-glass);
         }
 
-        .image-wrapper img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: var(--transition-smooth);
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
         }
 
-        .showcase-card:hover .image-wrapper img {
-            transform: scale(1.05);
+        th {
+            background-color: #4CAF50;
+            color: white;
         }
 
-        /* Mock UI screen helper inside card */
-        .mock-ui-placeholder {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, #111c36 0%, #090e1a 100%);
-            color: rgba(255,255,255,0.15);
-            font-size: 3.5rem;
-        }
-
-        .card-body {
-            padding: 2rem;
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-        }
-
-        .card-meta {
-            color: var(--color-secondary);
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-
-        .card-title { font-size: 1.4rem; font-weight: 700; margin-bottom: 1rem; }
-        .card-desc { color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.75rem; flex-grow: 1; }
-
-        .tag-row { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-        .tag-chip {
-            background: rgba(255,255,255,0.03);
-            border: 1px solid var(--border-glass);
-            padding: 0.3rem 0.8rem;
-            font-size: 0.8rem;
-            border-radius: 4px;
-            color: var(--text-secondary);
-        }
-
-        /* Credentials Grid */
-        .certifications-shelf {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .cert-badge-card {
-            padding: 1.75rem;
-            display: flex;
-            align-items: flex-start;
-            gap: 1.25rem;
-        }
-
-        .cert-badge-card i {
-            font-size: 2rem;
-            color: var(--color-secondary);
-        }
-
-        .cert-info h4 { font-size: 1.1rem; margin-bottom: 0.25rem; }
-        .cert-info p { color: var(--text-secondary); font-size: 0.85rem; }
-
-        /* Integrated Education Info */
-        .education-wrapper {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 2.5rem;
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-        }
-
-        .edu-icon-box {
-            width: 70px;
-            height: 70px;
-            background: rgba(56, 189, 248, 0.08);
-            border: 1px solid rgba(56, 189, 248, 0.2);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            color: var(--color-primary);
-        }
-
-        /* Unified Footer Connection Hub */
-        #connect {
-            padding-bottom: 6rem;
-            background: linear-gradient(to top, rgba(15, 21, 38, 0.4) 0%, transparent 100%);
-        }
-
-        .dock-layout {
-            display: grid;
-            grid-template-columns: 1fr 1.2fr;
-            gap: 4rem;
-        }
-
-        .social-dock {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.25rem;
-            margin-top: 1.5rem;
-        }
-
-        .dock-link {
-            padding: 1.5rem 1rem;
+        .contact-links {
             text-align: center;
+            margin-top: 20px;
+        }
+
+        .contact-links a {
+            margin-right: 10px;
+            color: #0088cc;
             text-decoration: none;
-            color: var(--text-primary);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 0.75rem;
-            font-weight: 600;
-            font-size: 0.9rem;
         }
 
-        .dock-link i { font-size: 1.8rem; transition: var(--transition-smooth); }
-        .dock-link.li-link i { color: #0077b5; }
-        .dock-link.gh-link i { color: #fff; }
-        .dock-link.ig-link i { color: #e1306c; }
-
-        .dock-link:hover {
-            border-color: var(--color-primary);
-            transform: translateY(-4px);
-        }
-
-        .msg-form {
-            padding: 2.5rem;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1.25rem;
-        }
-
-        .input-box {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-        }
-
-        .input-box.wide { grid-column: span 2; }
-        .input-box label { font-size: 0.8rem; color: var(--text-secondary); text-transform: uppercase; font-weight: 700; }
-        
-        .input-box input, .input-box textarea {
-            background: rgba(6, 9, 19, 0.5);
-            border: 1px solid var(--border-glass);
-            padding: 0.85rem;
-            border-radius: 6px;
-            color: #fff;
-            font-size: 0.95rem;
-            outline: none;
-            transition: var(--transition-smooth);
-        }
-
-        .input-box input:focus, .input-box textarea:focus {
-            border-color: var(--color-primary);
-            box-shadow: 0 0 12px rgba(56, 189, 248, 0.1);
-        }
-
-        footer {
-            text-align: center;
-            padding: 2.5rem 0;
-            border-top: 1px solid var(--border-glass);
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-        }
-
-        /* Layout Adjustments for Tablet/Mobile viewports */
-        @media (max-width: 968px) {
-            .hero-layout, .summary-grid, .dock-layout {
-                grid-template-columns: 1fr;
-                gap: 3.5rem;
-            }
-            .hero-headline { font-size: 2.8rem; }
-            .hero-layout { text-align: center; }
-            .hero-sub, .btn-group { margin-left: auto; margin-right: auto; justify-content: center; }
-            .nav-links { display: none; } /* Kept clean for high scannability */
+        .contact-links a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-
-    <!-- Primary Navigation Bar -->
-    <nav>
-        <div class="container nav-container">
-            <a href="#hero" class="logo">VIJAY KUMAR<span>.E</span></a>
-            <ul class="nav-links">
-                <li><a href="#hero" class="active">Home</a></li>
-                <li><a href="#profile">Profile</a></li>
-                <li><a href="#timeline">Timeline</a></li>
-                <li><a href="#systems">Systems</a></li>
-                <li><a href="#connect">Connect</a></li>
-            </ul>
-        </div>
-    </nav>
-
     <div class="container">
-        
-        <!-- Hero Section -->
-        <section id="hero">
-            <div class="hero-layout">
-                <div class="hero-left">
-                    <span class="hero-tag">Enterprise Ecosystem Developer</span>
-                    <h1 class="hero-headline">Architecting Enterprise Scalability & Workflow Automation</h1>
-                    <p class="hero-sub">Specialized in C#, ASP.NET Core development, database schema optimizations, and interactive front-ends to transform intricate technical specifications into product-grade digital systems.</p>
-                    <div class="btn-group">
-                        <a href="#systems" class="btn btn-primary"><i class="fa-solid from-font-awesome-catalog fa-layer-group"></i> Explore Systems</a>
-                        <a href="#connect" class="btn btn-secondary">Direct Channel</a>
-                    </div>
-                </div>
-                <div class="hero-media">
-                    <div class="avatar-frame">
-                        <!-- Add your profile photo path to src="" -->
-                        <img src="avatar.jpg" alt="Vijay Kumar E" class="avatar-img" onerror="this.style.display='none';">
-                        <div class="mock-ui-placeholder"><i class="fa-solid fa-code"></i></div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <div class="section">
+            <h1>Vijay Kumar's Portfolio</h1>
 
-        <!-- Professional Profile / About Section -->
-        <section id="profile">
-            <div class="section-header">
-                <span class="section-tag">Executive Summary</span>
-                <h2 class="section-title">Operational Value Delivery</h2>
-            </div>
-            <div class="summary-grid">
-                <div class="summary-text">
-                    <p>I am a results-focused .NET Developer and Business Analyst with professional expertise in deploying production web systems, transactional client platforms, and high-density tracking infrastructure.</p>
-                    <p>My methodology addresses product life cycles holistically: from leading early discovery workshops with domain stakeholders to mapping relational data schemas and engineering responsive data layers.</p>
-                    
-                    <h3 style="margin: 2.5rem 0 1.25rem 0; font-size: 1.3rem; font-weight:700;">Core Architecture Competencies</h3>
-                    <div class="filter-shelf">
-                        <button class="shelf-btn active" onclick="filterTech('all')">Complete Ecosystem</button>
-                        <button class="shelf-btn" onclick="filterTech('backend')">Backend Engines</button>
-                        <button class="shelf-btn" onclick="filterTech('frontend')">Frontend & UI</button>
-                        <button class="shelf-btn" onclick="filterTech('db')">Database & Analytics</button>
-                    </div>
+            <!-- Contact Information Section -->
+            <section id="contact">
+                <h2>Contact Information</h2>
+                <ul>
+                    <li><strong>Phone:</strong> 760-391-7058</li>
+                    <li><strong>Email:</strong> <a href="mailto:vijaykumarelumalai123@gmail.com">vijaykumarelumalai123@gmail.com</a></li>
+                    <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/your-linkedin-profile">LinkedIn Profile</a></li>
+                    <li><strong>GitHub:</strong> <a href="https://github.com/your-github-profile">GitHub Profile</a></li>
+                </ul>
+            </section>
 
-                    <div class="stack-grid" id="tech-stack-shelf">
-                        <!-- Iterated smoothly by Javascript -->
-                    </div>
-                </div>
+            <!-- Academic Information Section -->
+            <section id="academic-info">
+                <h2>Academic Information</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Degree</th>
+                            <th>Institution</th>
+                            <th>Address</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Bachelor of Computer Science Engineering</td>
+                            <td>Kingston Engineering College</td>
+                            <td>Chittor Main Road, Vellore 632059</td>
+                        </tr>
+                        <tr>
+                            <td>School Education</td>
+                            <td>NAG Matriculation Hr. Sec. School</td>
+                            <td>Chennai to Bangalore National Highway, Sumaithangi, Kaveripakkam 632508</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
 
-                <div class="metrics-block">
-                    <div class="metric-item glass-card">
-                        <span class="metric-num">3</span>
-                        <span class="metric-title">Software Engineering Internships</span>
-                    </div>
-                    <div class="metric-item glass-card">
-                        <span class="metric-num">2</span>
-                        <span class="metric-title">Enterprise Systems Shipped</span>
-                    </div>
-                    <div class="metric-item glass-card">
-                        <span class="metric-num">1</span>
-                        <span class="metric-title">Live Client Rollout Built From Scratch</span>
-                    </div>
-                    <div class="metric-item glass-card">
-                        <span class="metric-num">100%</span>
-                        <span class="metric-title">End-to-End Module Ownership</span>
-                    </div>
-                </div>
-            </div>
-        </section>
+            <!-- Industrial Exposure Section -->
+            <section id="industrial-exposure">
+                <h2>Industrial Exposure</h2>
+                <h3>Industrial Visit:</h3>
+                <ul>
+                    <li>MSC Technologies, Chennai, India</li>
+                </ul>
+                <h3>Inplant Training:</h3>
+                <ul>
+                    <li>Oasis Byte Internship on Data Science</li>
+                    <li>CodeBind Technologies, Chennai - Web Development Internship</li>
+                </ul>
+            </section>
 
-        <!-- Timeline Section -->
-        <section id="timeline">
-            <div class="section-header">
-                <span class="section-tag">Engineering History</span>
-                <h2 class="section-title">Professional Experience</h2>
-            </div>
-            <div class="timeline-container">
-                
-                <div class="timeline-card">
-                    <div class="timeline-node"></div>
-                    <span class="time-badge">Oct 2025 – Present</span>
-                    <h3 class="job-title">.NET Developer</h3>
-                    <span class="company-label">FocusLogic IT Services</span>
-                    <ul class="bullet-list">
-                        <li>Headed technical expansion tasks for an active Enterprise CRM platform and the structural AEGIS Construction Management layout via .NET Core and Blazor stacks.</li>
-                        <li>Built and automated granular workflow policies alongside analytical dashboard graphs for management clarity.</li>
-                        <li>Engineered the comprehensive Defect Management Module for construction tracking, smoothing on-site tracking and field-level assignment updates.</li>
-                    </ul>
-                </div>
+            <!-- Skills Section -->
+            <section id="skills">
+                <h2>Skills</h2>
+                <h3>Programming Languages:</h3>
+                <ul>
+                    <li>Python</li>
+                    <li>C</li>
+                    <li>Java</li>
+                </ul>
+                <h3>Data Science:</h3>
+                <ul>
+                    <li>Visualization</li>
+                    <li>Training Dataset</li>
+                </ul>
+                <h3>Full Stack:</h3>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>React JS</li>
+                </ul>
+                <h3>Artificial Intelligence and Machine Learning</h3>
+                <h3>Data Structures & Algorithms, Sorting Techniques</h3>
+            </section>
 
-                <div class="timeline-card">
-                    <div class="timeline-node"></div>
-                    <span class="time-badge">Feb 2025 – Aug 2025</span>
-                    <h3 class="job-title">SQL Developer Intern</h3>
-                    <span class="company-label">Mediterranean Shipping Company (MSC)</span>
-                    <ul class="bullet-list">
-                        <li>Programmed advanced T-SQL queries, complex data triggers, and optimized stored procedures to process enterprise-scale datasets securely.</li>
-                        <li>Architected and ran a clean modular Payroll Management application structure spanning initial conceptual data modeling through production tests.</li>
-                        <li>Executed detailed query analysis and database indexing rules to minimize processor consumption.</li>
-                    </ul>
-                </div>
+            <!-- Achievements Section -->
+            <section id="achievements">
+                <h2>Achievements</h2>
+                <ul>
+                    <li>Completed course certificate on Data Visualization</li>
+                    <li>Paper presentation on Quantum Machine Learning</li>
+                </ul>
+            </section>
 
-                <div class="timeline-card">
-                    <div class="timeline-node"></div>
-                    <span class="time-badge">July 2024 – Aug 2024</span>
-                    <h3 class="job-title">Web Developer Intern</h3>
-                    <span class="company-label">IVTL Infoview Technologies Pvt Ltd</span>
-                    <ul class="bullet-list">
-                        <li>Configured responsive system features built primarily on top of Java, Spring Boot, and custom data processing steps.</li>
-                        <li>Tested system behavior patterns and built a reliable real-time server tracking link system.</li>
-                    </ul>
-                </div>
+            <!-- Certifications Section -->
+            <section id="certifications">
+                <h2>Certifications</h2>
+                <ul>
+                    <li>Web Development</li>
+                    <li>Java</li>
+                    <li>Python</li>
+                    <li>Full Stack Development</li>
+                </ul>
+            </section>
 
-            </div>
-        </section>
-
-        <!-- Deep Systems / Projects Showcase -->
-        <section id="systems">
-            <div class="section-header">
-                <span class="section-tag">Production Implementations</span>
-                <h2 class="section-title">Featured Systems Overview</h2>
-            </div>
-            <div class="project-masonry">
-                
-                <div class="showcase-card glass-card">
-                    <div class="image-wrapper">
-                        <!-- Add local project image paths here -->
-                        <img src="project-crm.jpg" alt="Enterprise CRM Platform" onerror="this.style.display='none';">
-                        <div class="mock-ui-placeholder"><i class="fa-solid fa-chart-line"></i></div>
-                    </div>
-                    <div class="card-body">
-                        <span class="card-meta">Technical & Functional Architect</span>
-                        <h3 class="card-title">Enterprise CRM Platform</h3>
-                        <p class="card-desc">Designed automated client lifecycle tracks, structural records validation schemes, and responsive operational analytics dashboards using advanced enterprise architectures.</p>
-                        <div class="tag-row">
-                            <span class="tag-chip">.NET Core</span><span class="tag-chip">Blazor</span><span class="tag-chip">EF Core</span><span class="tag-chip">SQL Server</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="showcase-card glass-card">
-                    <div class="image-wrapper">
-                        <img src="project-aegis.jpg" alt="AEGIS Construction System" onerror="this.style.display='none';">
-                        <div class="mock-ui-placeholder"><i class="fa-solid fa-trowel-bricks"></i></div>
-                    </div>
-                    <div class="card-body">
-                        <span class="card-meta">Full Stack Module Owner</span>
-                        <h3 class="card-title">AEGIS Construction Management</h3>
-                        <p class="card-desc">Engineered the core Defect Management layout handling assignment chains, task logging, and supervisor tracking charts to coordinate site actions instantly.</p>
-                        <div class="tag-row">
-                            <span class="tag-chip">Blazor UI</span><span class="tag-chip">Radzen</span><span class="tag-chip">REST APIs</span><span class="tag-chip">SQL Engine</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="showcase-card glass-card">
-                    <div class="image-wrapper">
-                        <img src="project-scrap.jpg" alt="Client Scrap Management" onerror="this.style.display='none';">
-                        <div class="mock-ui-placeholder"><i class="fa-solid fa-boxes-packing"></i></div>
-                    </div>
-                    <div class="card-body">
-                        <span class="card-meta">Independent Product Engineer</span>
-                        <h3 class="card-title">Commercial Industrial Tracker</h3>
-                        <p class="card-desc">Conducted business case mappings independently with a regional logistics partner to digitize scrap inventory metrics, invoice generations, and live weight calculation logs.</p>
-                        <div class="tag-row">
-                            <span class="tag-chip">System Design</span><span class="tag-chip">Full Stack Web</span><span class="tag-chip">Data Modeling</span>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- Credentials & Background Section -->
-        <section id="credentials">
-            <div class="section-header">
-                <span class="section-tag">Credentials & Growth</span>
-                <h2 class="section-title">Education & Certifications</h2>
-            </div>
+            <!-- Projects Section -->
+            <section id="projects">
+                <h2>Projects</h2>
+                <h3>AI Spam Classifier</h3>
+                <p>The AI Spam Classifier project aims to develop a machine learning model capable of accurately identifying and filtering out spam emails from a user's inbox. Leveraging advanced algorithms and natural language processing techniques, the classifier analyzes email content and sender information to distinguish between legitimate messages and spam. Through extensive training on labeled datasets, the classifier learns to recognize patterns indicative of spam, enhancing email security and productivity by reducing the influx of unwanted messages.</p>
+            </section>
+            <section id="projects">
+                <h2>Projects</h2>
+                <h3>STUDENT MANAGEMENT (CURD)- Build using
+                    Python and SQL</h3>
+                <p>The Student Management system is a Python-based application that facilitates Create, Update, Read, and Delete (CURD) operations on student records stored in a SQL database. It provides functionalities for adding new students, updating existing records, retrieving student information, and removing outdated entries. The system streamlines administrative tasks for educational institutions, offering efficient management of student data with seamless integration of Python and SQL technologies.</p>
+            </section>
+            <section id="projects">
+                <h2>Projects</h2>
+                <h3>ECOMMERCE WEBSITE - BUILD USING HTML,CSS
+                    and JAVASCRIPT</h3>
+                <p>The Student Management system is a Python-based application that facilitates Create, Update, Read, and Delete (CURD) operations on student records stored in a SQL database. It provides functionalities for adding new students, updating existing records, retrieving student information, and removing outdated entries. The system streamlines administrative tasks for educational institutions, offering efficient management of student data with seamless integration of Python and SQL technologies.</p>
+            </section>
             
-            <div class="education-wrapper glass-card" style="margin-bottom: 3rem;">
-                <div class="edu-icon-box"><i class="fa-solid fa-graduation-cap"></i></div>
-                <div>
-                    <span style="color: var(--color-primary); font-weight:700; font-size:0.85rem; text-transform:uppercase;">Bachelor of Engineering</span>
-                    <h3 style="font-size:1.4rem; margin-top:0.2rem;">Computer Science & Engineering</h3>
-                    <p style="color: var(--text-secondary); font-size:0.95rem;">Kingston Engineering College &bull; Cumulative Grade Profile: <strong>8.1 / 10.0 CGPA</strong></p>
-                </div>
-            </div>
 
-            <div class="certifications-shelf">
-                <div class="cert-badge-card glass-card">
-                    <i class="fa-solid fa-shield-halved"></i>
-                    <div class="cert-info">
-                        <h4>Full Stack Development</h4>
-                        <p>Enterprise Software Design Strategies</p>
-                    </div>
-                </div>
-                <div class="cert-badge-card glass-card">
-                    <i class="fa-solid fa-database"></i>
-                    <div class="cert-info">
-                        <h4>Data Analytics & Visualization</h4>
-                        <p>Relational Data Mapping Insights</p>
-                    </div>
-                </div>
-                <div class="cert-badge-card glass-card">
-                    <i class="fa-solid fa-brain"></i>
-                    <div class="cert-info">
-                        <h4>AI Systems Fundamentals</h4>
-                        <p>Automation & Machine Intelligence</p>
-                    </div>
-                </div>
-                <div class="cert-badge-card glass-card">
-                    <i class="fa-solid fa-chart-pie"></i>
-                    <div class="cert-info">
-                        <h4>Power BI Platforms</h4>
-                        <p>Business Matrix Reporting Setups</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+            <!-- Languages Section -->
+            <section id="languages">
+                <h2>Languages</h2>
+                <ul>
+                    <li>English (Fluent)</li>
+                    <li>Tamil</li>
+                </ul>
+            </section>
 
-        <!-- Contact & Unified Channel Dock -->
-        <section id="connect">
-            <div class="section-header">
-                <span class="section-tag">Channel Pipeline</span>
-                <h2 class="section-title">Communication & Networks</h2>
-            </div>
-            <div class="dock-layout">
-                <div class="dock-left">
-                    <h3 style="font-size: 1.6rem; margin-bottom: 1rem;">Let's Initiate System Discussions</h3>
-                    <p style="color: var(--text-secondary); margin-bottom: 2rem;">Open to technical interviews, project consultation setups, or operational requirements engineering audits.</p>
-                    
-                    <h4 style="font-size:1rem; text-transform:uppercase; color:var(--text-secondary); margin-bottom:0.5rem;">Network Terminals</h4>
-                    <div class="social-dock">
-                        <a href="https://linkedin.com/in/vijay-kumar17" target="_blank" class="dock-link glass-card li-link">
-                            <i class="fa-brands fa-linkedin-in"></i><span>LinkedIn</span>
-                        </a>
-                        <a href="https://github.com/vijaykumarelumalai" target="_blank" class="dock-link glass-card gh-link">
-                            <i class="fa-brands fa-github"></i><span>GitHub</span>
-                        </a>
-                        <a href="https://instagram.com/" target="_blank" class="dock-link glass-card ig-link">
-                            <i class="fa-brands fa-instagram"></i><span>Instagram</span>
-                        </a>
-                    </div>
-                </div>
-
-                <form class="msg-form glass-card" onsubmit="event.preventDefault(); alert('Transmission completed successfully.');">
-                    <div class="input-box">
-                        <label>Identity / Name</label>
-                        <input type="text" required placeholder="Name">
-                    </div>
-                    <div class="input-box">
-                        <label>Return Destination</label>
-                        <input type="email" required placeholder="email@address.com">
-                    </div>
-                    <div class="input-box wide">
-                        <label>Transmission Context</label>
-                        <input type="text" required placeholder="Subject">
-                    </div>
-                    <div class="input-box wide">
-                        <label>Payload Specifications</label>
-                        <textarea rows="4" required placeholder="Message content details..."></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary" style="justify-self: start;">Send Message</button>
-                </form>
-            </div>
-        </section>
-
+            <!-- References Section -->
+            <section id="references">
+                <h2>References</h2>
+                <ul>
+                    <li>
+                        <strong>Mr. Balaji</strong><br>
+                        Head of Computer Science Engineering<br>
+                        Kingston Engineering College<br>
+                        Phone: 9894682240
+                    </li>
+                    <li>
+                        <strong>Mrs. K. Poongodi</strong><br>
+                        Assistant Professor<br>
+                        Kingston Engineering College, Vellore<br>
+                        Phone: 8754127391
+                    </li>
+                </ul>
+            </section>
+        </div>
     </div>
 
-    <footer>
-        <p>&copy; 2026 Vijay Kumar E. Optimized for architectural scalability and modular data control.</p>
-    </footer>
-
-    <!-- Interactive Data Arrays Processing Script -->
-    <script>
-        const structuralTechStack = [
-            { name: 'C# Programming', icon: 'fa-code', type: 'backend' },
-            { name: '.NET Core Engine', icon: 'fa-gears', type: 'backend' },
-            { name: 'ASP.NET Architecture', icon: 'fa-network-wired', type: 'backend' },
-            { name: 'Entity Framework Core', icon: 'fa-database', type: 'backend' },
-            { name: 'REST Architecture', icon: 'fa-link', type: 'backend' },
-            { name: 'Blazor UI Layouts', icon: 'fa-cubes', type: 'frontend' },
-            { name: 'Radzen Componentry', icon: 'fa-border-top-left', type: 'frontend' },
-            { name: 'JavaScript Core', icon: 'fa-brands fa-js', type: 'frontend' },
-            { name: 'HTML5 & CSS Systems', icon: 'fa-brands fa-html5', type: 'frontend' },
-            { name: 'SQL Server (SSMS)', icon: 'fa-server', type: 'db' },
-            { name: 'T-SQL Logic Engines', icon: 'fa-terminal', type: 'db' },
-            { name: 'Performance Indexing', icon: 'fa-bolt', type: 'db' },
-            { name: 'Git & Source Control', icon: 'fa-brands fa-git-alt', type: 'backend' },
-            { name: 'Power BI Reporting', icon: 'fa-chart-simple', type: 'db' }
-        ];
-
-        function populateStack(items) {
-            const displayShelf = document.getElementById('tech-stack-shelf');
-            displayShelf.innerHTML = '';
-            items.forEach(tech => {
-                const element = document.createElement('div');
-                element.className = 'stack-item glass-card';
-                element.innerHTML = `<i class="fa-solid ${tech.icon}"></i> <span>${tech.name}</span>`;
-                displayShelf.appendChild(element);
-            });
-        }
-
-        function filterTech(type) {
-            const buttons = document.querySelectorAll('.shelf-btn');
-            buttons.forEach(b => b.classList.remove('active'));
-            event.target.classList.add('active');
-
-            if (type === 'all') {
-                populateStack(structuralTechStack);
-            } else {
-                const isolation = structuralTechStack.filter(item => item.type === type);
-                populateStack(isolation);
-            }
-        }
-
-        // Keep Top Nav Highlight Actions tracking scrolling changes
-        window.addEventListener('scroll', () => {
-            let activeId = '';
-            const zones = document.querySelectorAll('section');
-            const targetLinks = document.querySelectorAll('.nav-links a');
-            
-            zones.forEach(zone => {
-                const targetPoint = zone.offsetTop;
-                if (pageYOffset >= targetPoint - 180) {
-                    activeId = zone.getAttribute('id');
-                }
-            });
-
-            targetLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href').includes(activeId)) {
-                    link.add('active');
-                }
-            });
-        });
-
-        // Initialize display configuration on loading scripts
-        populateStack(structuralTechStack);
-    </script>
+    <!-- Contact links -->
+    <div class="contact-links">
+        <a href="https://www.linkedin.com/in/vijay-kumar-e-91663b255/">LinkedIn</a>
+        <a href="https://www.instagram.com/the_vibrant_dreamer16/?next=%2F">Instagram</a>
+    </div>
 </body>
 </html>
